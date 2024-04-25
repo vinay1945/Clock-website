@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Stop Watch</title>
+  </head>
+  <body>
+    <div class="container w-full bg-slate-900 h-dvh">
+      <header class="w-full h-14 backdrop-blur-3xl bg-opacity-15 bg-slate-100">
+        <nav class="w-full h-full flex justify-between text-white">
+          <div class="navleft p-3">
+            <p class="hover:cursor-pointer text-2xl">ClockWorks</p>
+          </div>
+          <div class="navRight flex p-3">
+            <ul class="flex gap-8 justify-between">
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Alarm</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Stopwatch</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Wrld Clock</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Timer</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Pomodoro</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Focue Sessions</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="text-white flex justify-center flex-col w-full h-5/6 items-center pt-12">
+        <div class="">
+          <!-- <p class="flex justify-center items-center text-white w-full h-5/6 rounded-lg text-center text-9xl"id="digital-clock">00:00:00</p> -->
+          <div class="displayStopwatch flex justify-center items-center text-white w-full h-5/6 rounded-lg text-center text-9xl">
+            <span id="hours">00:</span>
+            <span id="minutes">00:</span>
+            <span id="second">00</span>
+          </div>
+          <div class="text-white  flex justify-center flex-row w-full h-5/6 items-center pt-4 gap-12 hover:cursor-pointer">
+              <button id="start-btn" class="bg-blue-600 text-6xl rounded-full w-16 h-16 flex justify-center items-center "><i data-lucide="play"></i></i></button>
+              <button id="pause-btn" class="bg-blue-600 text-6xl rounded-full w-16 h-16 hidden justify-center items-center "><i data-lucide="pause"></i></button>
+              <button id="reset-btn" class="bg-blue-600 text-6xl rounded-full w-16 h-16 flex justify-center items-center "><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    </script>
+    <script src="/src/Components/stopwatch.js"></script>
+</html>
