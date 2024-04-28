@@ -3,42 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link href="/src/output.css" rel="stylesheet" />
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Document</title>
   </head>
   <body>
     <div class="container w-full bg-slate-900 h-dvh">
-      <header class="w-full h-14 backdrop-blur-3xl	bg-opacity-15  bg-slate-100">
-        <nav class="w-full h-full flex  justify-between text-white">
+      <header class="w-full h-14 backdrop-blur-3xl bg-opacity-15 bg-slate-100">
+        <nav class="w-full h-full flex justify-between text-white">
           <div class="navleft p-3">
-            <p class="hover:cursor-pointer text-2xl">ClockWorks</p>
+            <p class="hover:cursor-pointer text-2xl">
+              <a href="/src/index.html">ClockWorks</a>
+            </p>
           </div>
           <div class="navRight flex p-3">
-            <ul class="flex gap-8 justify-between ">
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="">Alarm</a></li>
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="/src/Components/stopwatch.html">Stopwatch</a></li>
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="">Wrld Clock</a></li>
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="">Timer</a></li>
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="">Pomodoro</a></li>
-              <li class="hover:cursor-pointer hover:text-gray-300"><a href="">Focue Sessions</a></li>
+            <ul class="flex gap-8 justify-between">
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Alarm</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="/src/Components/Stopwatch.html">Stopwatch</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Wrld Clock</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="/src/Components/Timer.html">Timer</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Pomodoro</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Focue Sessions</a>
+              </li>
             </ul>
           </div>
         </nav>
       </header>
-      <main class="text-white flex justify-center flex-col w-full h-5/6	items-center pt-12">
+      <main
+        class="text-white flex justify-center flex-col w-full h-5/6 items-center pt-12"
+      >
         <div class="text-white text-4xl">Digital Clock</div>
-        <div class="digital-clock pt-10 flex justify-center items-center flex-col h-9/12">
-            <p class="bg-white max-w-120 rounded-lg text-5xl h-18 text-black" id="digital-clock"></p>
+        <div
+          class="digital-clock pt-10 flex justify-center items-center flex-col h-9/12"
+        >
+          <p
+            class="bg-white max-w-120 rounded-lg text-5xl h-18 text-black"
+            id="digital-clock"
+          ></p>
         </div>
       </main>
     </div>
   </body>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-    const displayclock = document.querySelector('#digital-clock')
+    lucide.createIcons();
+  </script>
+  <script src="/src/Components/Stopwatch.js"></script>
+  <script>
+    const displayclock = document.querySelector("#digital-clock");
     setInterval(() => {
-        const mydate = new Date()
-        // console.log(mydate.toLocaleTimeString());
-        displayclock.innerHTML = mydate.toLocaleTimeString();
+      const mydate = new Date();
+      // console.log(mydate.toLocaleTimeString());
+      displayclock.innerHTML = mydate.toLocaleTimeString();
     }, 1000);
   </script>
 </html>

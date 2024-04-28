@@ -3,16 +3,16 @@ let minutes = 0;
 let second = 0;
 let isinterval;
 let isRunning = false;
-const startBtn = document.querySelector("#start-btn");
+const StartBtn = document.querySelector("#start-btn");
 const StopBtn = document.querySelector("#pause-btn");
-const reSetBtn = document.querySelector("#reset-btn");
+const ReSetBtn = document.querySelector("#reset-btn");
 
 function startfunction() {
   if (!isRunning) {
     isinterval = setInterval(updataTime, 1000);
     isRunning = true;
   }
-  startBtn.classList.add("hidden");
+  StartBtn.classList.add("hidden");
   StopBtn.classList.remove("hidden");
   StopBtn.classList.add("flex");
 }
@@ -21,8 +21,8 @@ function stopfunction() {
   clearInterval(isinterval);
   isRunning = false;
   StopBtn.classList.remove('flex')
-  startBtn.classList.remove('hidden')
-  startBtn.classList.add('flex')
+  StartBtn.classList.remove('hidden')
+  StartBtn.classList.add('flex')
   StopBtn.classList.add('hidden')
 }
 function resetfunction() {
@@ -60,8 +60,8 @@ function updataDisplay() {
     .padStart(2, "0");
 }
 
-startBtn.addEventListener("click", startfunction);
+StartBtn.addEventListener("click", startfunction);
 StopBtn.addEventListener("click", stopfunction);
-reSetBtn.addEventListener("click", resetfunction);
+ReSetBtn.addEventListener("click", resetfunction);
 
 updataDisplay();

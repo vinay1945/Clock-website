@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Stop Watch</title>
+  </head>
+  <body>
+    <div class="container w-full bg-slate-900 h-dvh">
+      <header class="w-full h-14 backdrop-blur-3xl bg-opacity-15 bg-slate-100">
+        <nav class="w-full h-full flex justify-between text-white">
+          <div class="navleft p-3">
+            <p class="hover:cursor-pointer text-2xl"><a href="/src/index.html">ClockWorks</a></p>
+          </div>
+          <div class="navRight flex p-3">
+            <ul class="flex gap-8 justify-between">
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Alarm</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Stopwatch</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Wrld Clock</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Timer</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Pomodoro</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-gray-300">
+                <a href="">Focue Sessions</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="text-white flex  flex-col w-full h-5/6 items-center pt-10">
+        <div class="setTimer text-7xl flex flex-row gap-10">
+            <div class="hours flex gap-8 flex-col justify-center items-center">
+                <button id="hoursValueUp"><i data-lucide="chevron-up"></i></button>
+                <p id="displayHoursValue">00</p>
+                <button id="hoursValueDown"><i data-lucide="chevron-down"></i></button>
+            </div>
+            <div class="minutes flex gap-8 flex-col justify-center items-center">
+                <button id="minutesValueUp"><i data-lucide="chevron-up"></i></button>
+                <p id="displayMinutesValue">00</p>
+                <button id="minutesValueDown"><i data-lucide="chevron-down"></i></button>
+            </div>
+            <div class="second flex gap-8 flex-col justify-center items-center">
+                <button id="secondValueUp"><i data-lucide="chevron-up"></i></button>
+                <p id="displaysecondValue">00</p>
+                <button id="secondValueDown"><i data-lucide="chevron-down"></i></button>
+            </div>
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <button id="setTimer" class="bg-blue-600 text-3xl rounded-md hover:bg-blue-950 active:bg-blue-900 hover:duration-300 w-60 mt-8 h-16 flex justify-center items-center ">Set Timer</button>
+        </div>
+        <div id="displayTimer" class=" hidden pt-10 justify-evenly items-center w-full h-full">
+          <div class="flex flex-row text-3xl gap-2 w-1/4 justify-center items-center">
+            <p id="displayHours"></p>
+            <p>:</p>
+            <p id="displayMinutes"></p>
+            <p>:</p>
+            <p id="displaySeconds"></p>
+          </div>
+          <div>
+            <div class="text-white flex justify-center flex-row w-full h-5/6 items-center gap-12 hover:cursor-pointer">
+              <button id="start-btn" class="bg-blue-600 w-10 h-10 rounded-full flex justify-center items-center "><i data-lucide="play"></i></button>
+              <button id="pause-btn" class="bg-blue-600 w-10 h-10 rounded-full hidden justify-center items-center "><i data-lucide="pause"></i></button>
+              <button id="reset-btn" class="bg-blue-600 w-10 h-10 rounded-full flex justify-center items-center "><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    </script>
+    <script src="/src/Components/Timer.js"></script>
+</html>
